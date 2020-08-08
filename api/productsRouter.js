@@ -7,6 +7,7 @@ router.use(bodyParser.json());
 
 router.get('/products', async (req, res) => {
     const products = await Product.findAll();
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(products);
 });
 
