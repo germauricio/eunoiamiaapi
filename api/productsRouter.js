@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
+router.all('/product', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next()
+});
 
 router.get('/products', async (req, res) => {
     req.header('Access-Control-Allow-Headers', 'Origin')
@@ -13,7 +18,6 @@ router.get('/products', async (req, res) => {
 
 router.get('/product', async (req, res) => {
     req.header('Access-Control-Allow-Credentials', true);
-  
     req.header('Access-Control-Allow-Origin', '*');
     req.header('Access-Control-Allow-Headers', 'Origin')
     const products = await Product.findOne({
