@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const cors = require('cors');
+var cors = require('cors');
 const { Product } = require('../services/db');
 const bodyParser = require('body-parser');
 
@@ -12,10 +12,10 @@ router.get('/products', async (req, res) => {
     res.json(products);
 });
 
-router.get('/product', cors(), async (req, res) => {
+router.get('/product/:name', async (req, res) => {
     const products = await Product.findOne({
         where: {
-            name: req.body.name
+            name: req.params.name
         }
     });
     res.json(products);
