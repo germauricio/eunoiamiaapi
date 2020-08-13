@@ -12,10 +12,10 @@ router.get('/products', async (req, res) => {
     res.json(products);
 });
 
-router.get('/product', async (req, res) => {
+router.get('/product/:name', async (req, res) => {
     const product = await Product.findOne({
         where: {
-            name: req.body.name
+            name: req.params.name
         }
     });
     res.json(product);
