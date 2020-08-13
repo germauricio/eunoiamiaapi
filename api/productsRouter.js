@@ -13,12 +13,12 @@ router.get('/products', async (req, res) => {
 });
 
 router.get('/product', async (req, res) => {
-    const products = await Product.findOne({
+    const product = await Product.findOne({
         where: {
-            name: req.params.name
+            name: req.body.name
         }
     });
-    res.json(products);
+    res.json(product);
 });
 
 router.post('/product', async (req, res) => {
