@@ -21,7 +21,7 @@ router.get('/product', async (req, res) => {
     req.header('Access-Control-Allow-Headers', 'Origin')
     const products = await Product.findOne({
         where: {
-            name: req.body.name
+            name: req.params.name
         }
     });
     res.json(products);
