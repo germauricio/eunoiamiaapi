@@ -21,7 +21,7 @@ router.get('/product/:name', async (req, res) => {
     res.json(product);
 });
 
-router.get('/product/category/:category', async (req, res) => {
+router.get('/products/category/:category', async (req, res) => {
   const products = await Product.findAll({
       where: {
           name: req.params.category
