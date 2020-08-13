@@ -1,16 +1,18 @@
 const router = require('express').Router();
+const cors = require('cors');
 const { Product } = require('../services/db');
 const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
+router.use(cors())
 
 router.get('/products', async (req, res) => {
     const products = await Product.findAll();  
     res.json(products);
 });
 
-router.get('/product', async (req, res) => {
+router.get('/product', cors(), async (req, res) => {
     const products = await Product.findOne({
         where: {
             name: req.body.name
