@@ -3,9 +3,7 @@ const router = require('express').Router();
 const apiProductsRouter = require('./api/productsRouter');
 
 router.use(function(req, res, next) {
-    req.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Origin', '*');
-
+    res.header('Access-Control-Allow-Origin', 'origin');
     next();
  });
 
