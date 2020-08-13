@@ -10,6 +10,7 @@ module.exports = (sequelize, type) => {
       stock: type.INTEGER,
       description: type.STRING,
       detail: type.STRING,
-      image: type.STRING
+      image: type.STRING,
+      category: type.STRING
   })
 }
