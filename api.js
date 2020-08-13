@@ -9,7 +9,7 @@ router.use(function(req, res, next) {
 
 router.get('/products', apiProductsRouter);
 router.get('/product/:name', apiProductsRouter);
-router.get('/product/category/:category', apiProductsRouter);
+router.get('/products/category/:category', apiProductsRouter);
 router.put('/product', apiProductsRouter);
 router.delete('/product', apiProductsRouter);
 router.post('/product', apiProductsRouter);
