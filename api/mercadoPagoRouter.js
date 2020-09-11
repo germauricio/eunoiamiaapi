@@ -17,12 +17,11 @@ router.post('/payments/mercado_preference', (req,  res) => {
         items: [
             {
             title: req.body.name,
-            unit_price: parseInt(req.body.price),
+            unit_price: parseFloat(req.body.price),
             quantity: 1,
             }
         ]
     };
-
     mercadopago.preferences.create(preference)
         .then(response => {
         res.send({preferenceId: response.body.init_point.split('pref_id=')[1]});
