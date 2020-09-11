@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const apiProductsRouter = require('./api/productsRouter');
-const mercadoPagoRouter = require('../api/mercadoPagoRouter');
+const mercadoPagoRouter = require('./api/mercadoPagoRouter');
 
 router.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

@@ -1,13 +1,14 @@
 const router = require('express').Router();
 var cors = require('cors');
-const { Product } = require('../services/db');
-const bodyParser = require('body-parser');
+const mercadopago = require('mercadopago');
+var bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 router.use(cors())
 
-router.post('/payments/mercado_preference', jsonParser, (req,  res) => {
+
+router.post('/payments/mercado_preference', (req,  res) => {
     try {
       mercadopago.configure({
         access_token: process.env.MERCADOPAGO_CLIENT_ID
