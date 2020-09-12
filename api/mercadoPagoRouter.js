@@ -15,7 +15,6 @@ router.post('/payments/mercado_preference', (req,  res) => {
       });
 
       const shipments = {
-          mode: 'me2',
           local_pickup: req.body.shipment === 'retirement',
           default_shipping_methods: req.body.shipment === 'shipment'
       }
