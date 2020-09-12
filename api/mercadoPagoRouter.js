@@ -12,24 +12,34 @@ router.post('/payments/mercado_preference', (req,  res) => {
     try {
       mercadopago.configure({
         access_token: process.env.MERCADOPAGO_CLIENT_ID
-        });
-        let preference = {
+      });
+
+      const shipments = {
+        shipments:  {
+          mode: 'me2',
+          local_pickup: req.body.shipment === 'retirement',
+          default_shipping_methods: req.body.shipment === 'shipment'
+        }
+      }
+      let preference = {
         items: [
             {
             title: req.body.name,
             unit_price: parseFloat(req.body.price),
             quantity: 1,
             }
-        ]
-    };
-    mercadopago.preferences.create(preference)
+        ],
+        shipments: shipments
+      };
+
+      mercadopago.preferences.create(preference)
         .then(response => {
         res.send({preferenceId: response.body.init_point.split('pref_id=')[1]});
         })
         .catch(error => {
         console.log(error);
         res.status(403).send(error);
-        });
+      });
     } catch (error) {
       console.log(error);
     }
