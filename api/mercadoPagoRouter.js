@@ -23,7 +23,7 @@ router.post('/payments/mercado_preference', (req,  res) => {
             {
             title: req.body.name,
             unit_price: parseFloat(req.body.price),
-            quantity: 1,
+            quantity: req.body.quantity,
             }
         ],
         shipments: shipments
