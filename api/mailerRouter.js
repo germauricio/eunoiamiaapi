@@ -19,7 +19,7 @@ router.post('/mailer', (req, res) => {
         
         var mailOptions = {
             from: process.env.EMAIL,
-            to: 'mauriciogpauluk@gmail.com',
+            to: 'michidamario@gmail.com',
             subject: 'Nuevo pedido',
             text: req.body.text
         };
