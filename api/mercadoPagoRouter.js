@@ -7,7 +7,6 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 router.use(cors())
 
-
 router.post('/payments/mercado_preference', (req,  res) => {
     try {
       mercadopago.configure({
