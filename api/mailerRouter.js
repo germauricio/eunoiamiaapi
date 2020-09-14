@@ -10,8 +10,9 @@ router.use(cors())
 router.post('/mailer', (req, res) => {
 
         var transporter = nodemailer.createTransport({
-            service: 'Outlook',
-            port: 465,
+            service: 'Gmail',
+            host: 'smtp.gmail.com',
+            port: 587,
             secure: true,
             auth: {
                 user: process.env.EMAIL,
