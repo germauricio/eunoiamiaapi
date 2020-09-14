@@ -30,7 +30,7 @@ router.post('/mailer', (req, res) => {
                 res.send(500, err.message);
             } else {
                 console.log("Email sent");
-                console.log(info);
+                res.send(200, info);
             }
         });
 })
