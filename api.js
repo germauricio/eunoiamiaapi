@@ -3,6 +3,7 @@ const router = require('express').Router();
 const apiProductsRouter = require('./api/productsRouter');
 const mercadoPagoRouter = require('./api/mercadoPagoRouter');
 const apiMailerRouter = require('./api/mailerRouter');
+const apiUserRouter = require('./api/userRouter');
 
 router.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -18,6 +19,8 @@ router.post('/product', apiProductsRouter);
 
 router.post('/payments/mercado_preference', mercadoPagoRouter);
 
-router.post('/mailer', apiMailerRouter)
+router.post('/mailer', apiMailerRouter);
+
+router.post('/admin/login', apiUserRouter);
 
 module.exports = router;

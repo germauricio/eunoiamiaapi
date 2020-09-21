@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-
 const UserModel = require('../models/User');
 const ProductModel = require('../models/Product');
 
@@ -12,9 +11,9 @@ const User = UserModel(sequelize, Sequelize);
 const Product = ProductModel(sequelize, Sequelize);
 
 sequelize.sync({ force: false })
-    .then(() => {
-        console.log("Tablas sincronizadas");
-    })
+.then(() => {
+    console.log("Tablas sincronizadas");
+})
 
 module.exports = {
     User,
