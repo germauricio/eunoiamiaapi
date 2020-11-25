@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const UserModel = require('../models/User');
 const ProductModel = require('../models/Product');
 
-const sequelize = new Sequelize('nH3c5Td5iA', 'nH3c5Td5iA', 'gU36O8PdNQ', {
+const sequelize = new Sequelize('SFOpIrcroG', 'SFOpIrcroG', 'wvKobON9g9', {
     host: 'remotemysql.com',
     dialect: 'mysql'
 });
