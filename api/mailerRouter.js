@@ -29,7 +29,6 @@ router.post('/mailer', (req, res) => {
                 console.log(error);
                 res.send(500, err.message);
             } else {
-                console.log("Email sent");
                 res.send(200, info);
             }
         });
