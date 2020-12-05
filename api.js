@@ -17,6 +17,9 @@ router.put('/product', apiProductsRouter);
 router.delete('/product', apiProductsRouter);
 router.post('/product', apiProductsRouter);
 
+router.post('/sell', apiSellsRouter);
+router.get('/sells', apiSellsRouter);
+
 router.post('/payments/mercado_preference', mercadoPagoRouter);
 
 router.post('/mailer', apiMailerRouter);
