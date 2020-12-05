@@ -12,7 +12,7 @@ router.get('/admin/sells', async (req, res) => {
     res.json(sells);
 });
 
-router.post('/admin/sell', (req, res) => {
+router.post('/admin/sell', async (req, res) => {
     const sell = await Sell.create(req.body);
     res.json(sell);
 });

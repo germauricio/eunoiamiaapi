@@ -4,6 +4,7 @@ const apiProductsRouter = require('./api/productsRouter');
 const mercadoPagoRouter = require('./api/mercadoPagoRouter');
 const apiMailerRouter = require('./api/mailerRouter');
 const apiUserRouter = require('./api/userRouter');
+const apiSellsRouter = require('./api/sellsRouter');
 
 router.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
