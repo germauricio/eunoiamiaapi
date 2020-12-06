@@ -3,6 +3,5 @@ module.exports = (sequelize, type) => {
         contact: type.STRING,
         total: type.INTEGER,
         product_name: type.STRING,
-        quantity: type.INTEGER
     })
   }
