@@ -12,7 +12,7 @@ const User = UserModel(sequelize, Sequelize);
 const Product = ProductModel(sequelize, Sequelize);
 const Sell = SellModel(sequelize, Sequelize);
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: true })
 .then(() => {
     console.log("Tablas sincronizadas");
 })
