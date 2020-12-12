@@ -39,7 +39,8 @@ router.put('/product', async (req, res) => {
     const product = await Product.update({ 
         stock: req.body.stock,
         price: req.body.price,
-        detail: req.body.detail
+        detail: req.body.detail,
+        cost: req.body.cost
       }, 
       {
         where: {
