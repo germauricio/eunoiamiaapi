@@ -36,7 +36,6 @@ router.post('/product', async (req, res) => {
 });
 
 router.put('/product', async (req, res) => {
-    console.log(req.body);
     const product = await Product.update({ 
         stock: req.body.stock,
         price: req.body.price,

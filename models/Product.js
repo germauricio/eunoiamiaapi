@@ -11,6 +11,7 @@ module.exports = (sequelize, type) => {
       description: type.STRING,
       detail: type.STRING(2000),
       image: type.STRING,
-      category: type.STRING
+      category: type.STRING,
+      cost: type.INTEGER
   })
 }

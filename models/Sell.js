@@ -3,6 +3,8 @@ module.exports = (sequelize, type) => {
         contact: type.STRING,
         total: type.INTEGER,
         product_name: type.STRING,
-        shipment: type.STRING
+        shipment: type.STRING,
+        cost: type.INTEGER,
+        payment: type.STRING
     })
   }
