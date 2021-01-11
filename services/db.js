@@ -3,8 +3,8 @@ const UserModel = require('../models/User');
 const ProductModel = require('../models/Product');
 const SellModel = require('../models/Sell');
 
-const sequelize = new Sequelize('eunoiadb', 'admin', 'fhF9v2rAjq', {
-    host: 'eunoiamia-prod.chm5tno4ikas.us-east-1.rds.amazonaws.com',
+const sequelize = new Sequelize('sql10386341', 'sql10386341', '1At1wFCzJB', {
+    host: 'sql10.freemysqlhosting.net',
     dialect: 'mysql'
 });
 
