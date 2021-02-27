@@ -12,6 +12,7 @@ router.use(function(req, res, next) {
  });
 
 router.get('/products', apiProductsRouter);
+router.get('/products/outstandings', apiProductsRouter);
 router.get('/product/:name', apiProductsRouter);
 router.get('/products/category/:category', apiProductsRouter);
 router.put('/product', apiProductsRouter);
