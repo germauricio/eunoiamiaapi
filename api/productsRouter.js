@@ -12,6 +12,15 @@ router.get('/products', async (req, res) => {
     res.json(products);
 });
 
+router.get('/products/outstandings', async (req, res) => {
+  const products = await Product.findAll({
+    where: {
+      outstanding: 1
+    }
+  });  
+  res.json(products);
+});
+
 router.get('/product/:name', async (req, res) => {
     const product = await Product.findOne({
         where: {

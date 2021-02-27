@@ -12,6 +12,10 @@ module.exports = (sequelize, type) => {
       detail: type.STRING(2000),
       image: type.STRING,
       category: type.STRING,
-      cost: type.INTEGER
+      cost: type.INTEGER,
+      outstanding: {
+        type: type.INTEGER,
+        defaultValue: 0
+      }
   })
 }
