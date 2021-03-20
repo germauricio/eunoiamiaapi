@@ -2,6 +2,7 @@ const router = require('express').Router();
 var cors = require('cors');
 const { User } = require('../services/db');
 const bodyParser = require('body-parser');
+const { v4: uuidv4 } = require('uuid');
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
@@ -17,13 +18,14 @@ router.post('/admin/login', (req, res) => {
         if (user) {
             res.status(200);
             res.send({
-                'message': 'logged in'
-              });
+                message: 'logged in',
+                id: uuidv4()
+            });
         }
         else {
             res.status(404);
             res.send({
-              'message': 'invalidad credentials'
+              message: 'invalidad credentials'
             });
         }
     });
