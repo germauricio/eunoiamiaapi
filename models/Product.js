@@ -16,6 +16,10 @@ module.exports = (sequelize, type) => {
       outstanding: {
         type: type.INTEGER,
         defaultValue: 0
+      },
+      imagesquantity: {
+        type: type.INTEGER,
+        defaultValue: 3
       }
   })
 }
