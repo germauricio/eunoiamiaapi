@@ -50,7 +50,8 @@ router.put('/product', async (req, res) => {
         price: req.body.price,
         detail: req.body.detail,
         cost: req.body.cost,
-        imagesquantity: req.body.imagesquantity
+        imagesquantity: req.body.imagesquantity,
+        outstanding: req.body.outstanding
       }, 
       {
         where: {
